@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.example.boom"
+        minSdk 21
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures{
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':mUtils')
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+
+    //okhttp、retrofit、rxjava
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+
+    //解决RxJava内存泄漏，但在联网请求的时候使用了liveData，其实已经解决了。观察事件不能取消。
+    //同时在单独使用rxJava的时候还是要用。比如在启动页，还未去主页面，手动点击返回键的时候有效
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    //广告banner
+    implementation 'io.github.youth5201314:banner:2.2.2'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //工具类集合（相关引用参考：https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md）
+    implementation 'com.blankj:utilcodex:1.31.0'
+
+    //沉浸式状态栏 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+    //管理cookieJar的
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //rxpermissions 权限申请
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    //流式布局
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+
+    //viewpager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta02'
+    //TextInputLayout的依赖
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    //Google推荐的EasyPermission库
+    implementation 'pub.devrel:easypermissions:3.0.0'
+}

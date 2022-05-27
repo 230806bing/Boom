@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Boom</string>
+    <string name="result_network_error">网络不给力，请检查网络</string>
+    <string name="result_server_error">服务器连接失败，请稍后再试</string>
+    <string name="result_server_timeout">服务器连接超时，请稍后再试</string>
+    <string name="result_empty_error">系统繁忙，请稍后再试</string>
+    <string name="data_parsing_error">数据解析出错</string>
+    <string name="tv_title">Hello Music</string>
+    <string name="btn_login">登陆</string>
+    <string name="tv_phone">请输入手机号</string>
+    <string name="tv_pwd">请输入密码</string>
+    <string name="tv_code">请输入验证码</string>
+    <string name="send_code">发送验证码</string>
+    <string name="use_code">使用验证码登陆</string>
+    <string name="use_pwd">使用账号密码登陆</string>
+    <string name="register_account">注册账号</string>
+    <string name="tv_username">请输入用户名</string>
+    <string name="tv_pwd_again">再次输入密码</string>
+    <string name="btn_register">注册</string>
+    <string name="to_login">已有账号立即登陆</string>
+    <string name=""></string>
+</resources>
