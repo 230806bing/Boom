@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0">
+
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mine_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_mine_background1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/mine_background_style"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+
+        <com.example.boom.view.CircleImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/portrait"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintLeft_toLeftOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/guideline2"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.04"
+            app:layout_constraintHeight_percent="0.04"
+            android:src="@drawable/rename"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_portrait"
+            app:layout_constraintBottom_toBottomOf="@id/iv_portrait"
+            />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="甜橙柚子冰"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.05"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_portrait"
+            app:layout_constraintLeft_toLeftOf="@id/iv_portrait"/>
+
+        <TextView
+            android:id="@+id/tv_id_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintTop_toBottomOf="@id/tv_username"
+            app:layout_constraintLeft_toLeftOf="@id/tv_username"/>
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1323086"
+            android:letterSpacing="0.05"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/tv_id_hint"
+            app:layout_constraintLeft_toRightOf="@id/tv_id_hint"/>
+
+        <TextView
+            android:id="@+id/tv_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="理想主义的花终将会盛开在浪漫主义的土壤里"
+            android:textSize="12sp"
+            android:letterSpacing="0.05"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/tv_id"
+            app:layout_constraintLeft_toLeftOf="@id/tv_id_hint"/>
+
+        <TextView
+            android:id="@+id/tv_focus_on_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintTop_toBottomOf="@id/tv_signature"
+            app:layout_constraintLeft_toLeftOf="@id/tv_signature"/>
+
+        <TextView
+            android:id="@+id/tv_focus_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/focus_on"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/grey"
+            android:letterSpacing="0.05"
+            app:layout_constraintBottom_toBottomOf="@id/tv_focus_on_num"
+            app:layout_constraintLeft_toRightOf="@id/tv_focus_on_num"/>
+
+        <TextView
+            android:id="@+id/tv_fans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintTop_toBottomOf="@id/tv_signature"
+            app:layout_constraintLeft_toRightOf="@id/tv_focus_on"/>
+
+        <TextView
+            android:id="@+id/tv_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fans"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/grey"
+            android:letterSpacing="0.05"
+            app:layout_constraintBottom_toBottomOf="@id/tv_fans_num"
+            app:layout_constraintLeft_toRightOf="@id/tv_fans_num"/>
+
+        <TextView
+            android:id="@+id/tv_friends_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:letterSpacing="0.05"
+            app:layout_constraintTop_toBottomOf="@id/tv_signature"
+            app:layout_constraintLeft_toRightOf="@id/tv_fans"/>
+
+        <TextView
+            android:id="@+id/tv_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friends"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/grey"
+            android:letterSpacing="0.05"
+            app:layout_constraintBottom_toBottomOf="@id/tv_friends_num"
+            app:layout_constraintLeft_toRightOf="@id/tv_friends_num"/>
+
+        <ImageView
+            android:id="@+id/iv_mine_background2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/mine_background_style"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/guideline4" />
+
+        <ImageView
+            android:id="@+id/iv_live_house_order"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/show"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toTopOf="@id/guideline5"
+            app:layout_constraintLeft_toLeftOf="@id/guideline3"
+            app:layout_constraintRight_toRightOf="@id/guideline7"/>
+
+        <TextView
+            android:id="@+id/tv_live_house_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/live_house_order"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_live_house_order"
+            app:layout_constraintLeft_toLeftOf="@id/guideline3"
+            app:layout_constraintRight_toRightOf="@id/guideline7"
+            />
+
+        <ImageView
+            android:id="@+id/iv_surrounding_order"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/order"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toTopOf="@id/guideline5"
+            app:layout_constraintLeft_toLeftOf="@id/guideline7"
+            app:layout_constraintRight_toRightOf="@id/guideline8"/>
+
+        <TextView
+            android:id="@+id/tv_surrounding_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/surrounding_order"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_surrounding_order"
+            app:layout_constraintLeft_toLeftOf="@id/guideline7"
+            app:layout_constraintRight_toRightOf="@id/guideline8"
+            />
+
+        <ImageView
+            android:id="@+id/iv_payment_code"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/scancode"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toTopOf="@id/guideline5"
+            app:layout_constraintLeft_toLeftOf="@id/guideline8"
+            app:layout_constraintRight_toRightOf="@id/guideline9"/>
+
+        <TextView
+            android:id="@+id/tv_payment_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_code"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_live_house_order"
+            app:layout_constraintLeft_toLeftOf="@id/guideline8"
+            app:layout_constraintRight_toRightOf="@id/guideline9"
+            />
+
+        <ImageView
+            android:id="@+id/iv_opinion"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/opinion"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toTopOf="@id/guideline5"
+            app:layout_constraintLeft_toLeftOf="@id/guideline9"
+            app:layout_constraintRight_toRightOf="@id/guideline10"/>
+
+        <TextView
+            android:id="@+id/tv_opinion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opinion"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_live_house_order"
+            app:layout_constraintLeft_toLeftOf="@id/guideline9"
+            app:layout_constraintRight_toRightOf="@id/guideline10"
+            />
+
+        <ImageView
+            android:id="@+id/iv_collection"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/star"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toTopOf="@id/guideline6"
+            app:layout_constraintLeft_toLeftOf="@id/guideline3"
+            app:layout_constraintRight_toRightOf="@id/guideline7"/>
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_collection"
+            app:layout_constraintLeft_toLeftOf="@id/guideline3"
+            app:layout_constraintRight_toRightOf="@id/guideline7"
+            />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/setting2"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintTop_toTopOf="@id/guideline6"
+            app:layout_constraintLeft_toLeftOf="@id/guideline7"
+            app:layout_constraintRight_toRightOf="@id/guideline8"/>
+
+        <TextView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/iv_setting"
+            app:layout_constraintLeft_toLeftOf="@id/guideline7"
+            app:layout_constraintRight_toRightOf="@id/guideline8"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.245" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.46" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.675" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

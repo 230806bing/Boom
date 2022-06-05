@@ -49,7 +49,7 @@ public class BaseResponse<T> implements Serializable {
         this.code = code;
     }
 
-    public boolean isSuccess(){
+    public boolean isSuccess() {
         return RESULT_SUCCESS == code;
     }
 

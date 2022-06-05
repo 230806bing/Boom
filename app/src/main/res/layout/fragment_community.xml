@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_community_tab"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            app:tl_indicator_color="@color/main_color"
+            app:tl_indicator_height="3dp"
+            app:tl_textSelectColor="@color/black"
+            app:tl_textUnselectColor="@color/grey"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_textsize="15sp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_community"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tl_community_tab"
+            />
+
+        <ImageView
+            android:id="@+id/fab"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintWidth_percent="0.18"
+            android:src="@drawable/posting"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintTop_toTopOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
