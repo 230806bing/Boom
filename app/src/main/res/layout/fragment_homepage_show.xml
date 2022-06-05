@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.youth.banner.Banner
+            android:id="@+id/show_banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_homepage_show_tab"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/show_banner"
+            app:tl_indicator_color="@color/main_color"
+            app:tl_indicator_height="0dp"
+            app:tl_tab_padding="8dp"
+            android:paddingLeft="15dp"
+            app:tl_textSelectColor="@color/black"
+            app:tl_textUnselectColor="@color/grey"
+            app:tl_textsize="12sp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_homepage_show"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintTop_toBottomOf="@id/tl_homepage_show_tab" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

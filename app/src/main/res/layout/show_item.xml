@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_show_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/show_cover1"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:letterSpacing="0.1"
+            android:text="首届”声音共和诗歌市集“海朋森X发光曲线X野外合作社"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_cover"
+            app:layout_constraintTop_toTopOf="@id/iv_show_cover"
+            app:layout_constraintWidth_percent="0.55" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:letterSpacing="0.1"
+            android:text="广州"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_cover"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:letterSpacing="0.1"
+            android:text="声音共和Livehouse"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/tv_location"
+            app:layout_constraintTop_toTopOf="@id/tv_location" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:letterSpacing="0.1"
+            android:text="开演时间待定"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:letterSpacing="0.1"
+            android:text="#摇滚 独立"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="0.05"
+            android:text="￥80起"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_tag"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

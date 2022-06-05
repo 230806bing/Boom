@@ -13,6 +13,252 @@
         tools:context=".module.community.PostingActivity"
         android:background="#f0f0f0">
 
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline1"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:letterSpacing="0.05"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="@id/iv_background"
+            app:layout_constraintBottom_toBottomOf="@id/iv_background"
+            />
+
+        <Button
+            android:id="@id/tv_setting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintHeight_percent="0.04"
+            android:text="@string/post"
+            android:background="@drawable/btn_login_style"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:letterSpacing="0.05"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/tv_cancel"
+            app:layout_constraintBottom_toBottomOf="@id/tv_cancel"
+            />
+
+        <ImageView
+            android:id="@+id/iv_background2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_percent="0.35"
+            app:layout_constraintTop_toTopOf="@id/guideline3"/>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="分享新鲜事......"
+            android:background="@null"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="15sp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline3"/>
+
+        <ImageView
+            android:id="@+id/iv_camera_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f0f0f0"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintWidth_percent="0.27"
+            app:layout_constraintStart_toStartOf="@id/et_content"
+            app:layout_constraintTop_toTopOf="@id/guideline4"
+            />
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/camera"
+            android:layout_marginTop="18dp"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintWidth_percent="0.12"
+            app:layout_constraintEnd_toEndOf="@id/iv_camera_background"
+            app:layout_constraintStart_toStartOf="@id/iv_camera_background"
+            app:layout_constraintTop_toTopOf="@id/iv_camera_background"
+            />
+
+        <TextView
+            android:id="@+id/tv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/iv_camera"
+            app:layout_constraintEnd_toEndOf="@id/iv_camera"
+            app:layout_constraintTop_toBottomOf="@id/iv_camera"/>
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag"
+            android:background="@drawable/tv_style"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:letterSpacing="0.1"
+            android:textSize="10sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/iv_camera_background"
+            app:layout_constraintTop_toBottomOf="@id/iv_camera_background"/>
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/tag"
+            app:layout_constraintWidth_percent="0.04"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="@id/tv_tag"
+            app:layout_constraintTop_toTopOf="@id/tv_tag"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tag"
+            />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:background="@drawable/tv_style"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="10sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:letterSpacing="0.1"
+            app:layout_constraintStart_toEndOf="@id/tv_tag"
+            app:layout_constraintTop_toBottomOf="@id/iv_camera_background"/>
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/location"
+            app:layout_constraintWidth_percent="0.04"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="@id/tv_location"
+            app:layout_constraintTop_toTopOf="@id/tv_location"
+            app:layout_constraintBottom_toBottomOf="@id/tv_location"
+            />
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open"
+            android:background="@drawable/tv_style"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="10sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:letterSpacing="0.1"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/iv_camera_background"/>
+
+        <ImageView
+            android:id="@+id/iv_open"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/earth"
+            app:layout_constraintWidth_percent="0.04"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="@id/tv_open"
+            app:layout_constraintTop_toTopOf="@id/tv_open"
+            app:layout_constraintBottom_toBottomOf="@id/tv_open"
+            />
+
+        <ImageView
+            android:id="@+id/iv_qq"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/qq"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="@id/et_content"
+            app:layout_constraintTop_toBottomOf="@id/iv_background2"
+            />
+
+        <ImageView
+            android:id="@+id/iv_wechat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/pyq"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintHeight_percent="0.06"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toEndOf="@id/iv_qq"
+            app:layout_constraintTop_toBottomOf="@id/iv_background2"
+            />
+
+        <ImageView
+            android:id="@+id/iv_time"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/time"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/iv_background2"
+            />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.07"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.24"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

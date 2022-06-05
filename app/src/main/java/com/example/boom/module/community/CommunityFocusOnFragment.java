@@ -63,6 +63,7 @@ public class CommunityFocusOnFragment extends BaseFragment<CommunityFocusOnViewM
                 "#美景","4","100","405",imagesList2,false);
         communityFocusOnItems.add(communityFocusOnItem1);
         communityFocusOnItems.add(communityFocusOnItem2);
+        communityFocusOnItems.add(communityFocusOnItem1);
     }
 
 

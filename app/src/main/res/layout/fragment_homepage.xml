@@ -12,10 +12,25 @@
         android:layout_height="match_parent"
         android:background="#f0f0f0">
 
-        <TextView
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_homepage_tab"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="首页"/>
+            android:layout_height="60dp"
+            android:background="@color/white"
+            app:tl_indicator_color="@color/main_color"
+            app:tl_indicator_height="3dp"
+            app:tl_textSelectColor="@color/black"
+            app:tl_textUnselectColor="@color/grey"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_textsize="15sp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_homepage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tl_homepage_tab"
+            />
 
 
 

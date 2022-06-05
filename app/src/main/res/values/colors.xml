@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#6C6B6B</color>
+    <color name="white2">#f0f0f0</color>
     <color name="stroke_grey">#BFA3A2A2</color>
     <color name="grey1">#686C6B6B</color>
     <color name="txt_color">#E6373737</color>
@@ -15,4 +16,6 @@
     <color name="blue">#DA00A3D4</color>
     <color name="send_code_blue">#03A9F4</color>
     <color name="topic_blue">#F02593DD</color>
+    <color name="red">#FF0000</color>
+    <color name="grey3">#466C6B6B</color>
 </resources>

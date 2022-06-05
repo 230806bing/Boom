@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.boom">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +14,18 @@
         android:theme="@style/Theme.Boom"
         tools:replace="android:theme">
         <activity
+            android:name=".module.homepage.ShowDetailActivity"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".module.community.PostingActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".module.mine.FocusOnActivity"
             android:exported="false" />
@@ -25,11 +35,6 @@
         <activity
             android:name=".module.homepage.HomePageActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".module.login.CodeLoginActivity"

@@ -1,198 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.example.boom.view.CircleImageView
-        android:id="@+id/iv_portrait"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/portrait"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintWidth_percent="0.1" />
+    <data>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_username"
-        android:text="橙子味冰块"
-        android:textSize="12sp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="3dp"
-        app:layout_constraintLeft_toRightOf="@id/iv_portrait"
-        app:layout_constraintTop_toTopOf="@id/iv_portrait"/>
+    </data>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_time"
-        android:text="06-01 18:22"
-        android:textSize="10sp"
-        android:textColor="@color/grey"
-        android:layout_marginTop="3dp"
-        app:layout_constraintLeft_toLeftOf="@id/tv_username"
-        app:layout_constraintTop_toBottomOf="@id/tv_username"/>
-
-
-
-
-    <Button
-        android:id="@+id/btn_focus_on"
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        app:layout_constraintWidth_percent="0.15"
-        android:text="@string/focus_on_add"
-        android:letterSpacing="0.05"
-        android:textSize="10sp"
-        android:background="@drawable/btn_focus_on_style"
-        app:layout_constraintRight_toRightOf="@id/guideline3"
-        app:layout_constraintTop_toTopOf="@id/iv_portrait"
-        app:layout_constraintBottom_toBottomOf="@id/iv_portrait"/>
-
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.6"
-        android:id="@+id/tv_content"
-        android:text="当最后一丝余晖洒尽最后的潇洒，阳光吐尽最后一口浊气。没有了所谓的地平线的影子，留下淡淡的一抹烟，淡的像被漂白过的烟飘到几米外一般。"
-        android:textSize="12sp"
-        android:textColor="@color/txt_color"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/tv_username"
-        app:layout_constraintTop_toBottomOf="@id/iv_portrait"/>
-
-
-    <com.example.boom.module.community.view.MultiImageView
-        android:id="@+id/multi_image"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.6"
-        app:layout_constraintTop_toBottomOf="@id/tv_content"
-        app:layout_constraintLeft_toLeftOf="@id/tv_username"
-        android:padding="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_topic"
-        android:text="#落日"
-        android:textSize="10sp"
-        android:letterSpacing="0.06"
-        android:background="@drawable/tv_style"
-        android:textColor="@color/topic_blue"
-        android:layout_marginTop="4dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        app:layout_constraintLeft_toLeftOf="@id/tv_username"
-        app:layout_constraintTop_toBottomOf="@id/multi_image"/>
-
-    <ImageView
-        android:id="@+id/iv_share"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/share"
-        android:layout_marginTop="15dp"
-        app:layout_constraintWidth_percent="0.05"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintTop_toBottomOf="@id/tv_topic"
-        app:layout_constraintLeft_toLeftOf="@id/tv_username"/>
-
-    <TextView
-        android:id="@+id/tv_share"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:textColor="@color/grey"
-        android:textSize="10sp"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintLeft_toRightOf="@id/iv_share"
-        app:layout_constraintTop_toTopOf="@id/iv_share"
-        app:layout_constraintBottom_toBottomOf="@id/iv_share"/>
-
-    <ImageView
-        android:id="@+id/iv_comment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/comment"
-        android:layout_marginTop="15dp"
-        app:layout_constraintWidth_percent="0.05"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintTop_toBottomOf="@id/tv_topic"
-        app:layout_constraintLeft_toLeftOf="@id/guideline4"/>
-
-    <TextView
-        android:id="@+id/tv_comment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="27"
-        android:textColor="@color/grey"
-        android:textSize="10sp"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintLeft_toRightOf="@id/iv_comment"
-        app:layout_constraintTop_toTopOf="@id/iv_share"
-        app:layout_constraintBottom_toBottomOf="@id/iv_share"/>
-
-    <ImageView
-        android:id="@+id/iv_likes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/heart_grey"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="5dp"
-        app:layout_constraintWidth_percent="0.05"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintTop_toBottomOf="@id/tv_topic"
-        app:layout_constraintRight_toLeftOf="@id/tv_like"/>
-
-    <TextView
-        android:id="@+id/tv_like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="457"
-        android:textColor="@color/grey"
-        android:textSize="10sp"
-        app:layout_constraintRight_toRightOf="@id/tv_content"
-        app:layout_constraintTop_toTopOf="@id/iv_share"
-        app:layout_constraintBottom_toBottomOf="@id/iv_share"/>
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.44"
-        />
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05"
-        />
+        <com.example.boom.view.CircleImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/portrait"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_username"
+            android:text="橙子味冰块"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_portrait"
+            app:layout_constraintTop_toTopOf="@id/iv_portrait" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_time"
+            android:text="06-01 18:22"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            android:layout_marginTop="3dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_username"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02"
-        />
+        <Button
+            android:id="@+id/btn_focus_on"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            app:layout_constraintWidth_percent="0.15"
+            android:text="@string/focus_on_add"
+            android:letterSpacing="0.05"
+            android:textSize="10sp"
+            android:background="@drawable/btn_focus_on_style"
+            app:layout_constraintRight_toRightOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/iv_portrait"
+            app:layout_constraintBottom_toBottomOf="@id/iv_portrait" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.93" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.6"
+            android:id="@+id/tv_content"
+            android:text="当最后一丝余晖洒尽最后的潇洒，阳光吐尽最后一口浊气。没有了所谓的地平线的影子，留下淡淡的一抹烟，淡的像被漂白过的烟飘到几米外一般。"
+            android:textSize="12sp"
+            android:textColor="@color/txt_color"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_username"
+            app:layout_constraintTop_toBottomOf="@id/iv_portrait" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.example.boom.module.community.view.MultiImageView
+            android:id="@+id/multi_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintTop_toBottomOf="@id/tv_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_username"
+            android:padding="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_topic"
+            android:text="#落日"
+            android:textSize="10sp"
+            android:letterSpacing="0.06"
+            android:background="@drawable/tv_style"
+            android:textColor="@color/topic_blue"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_username"
+            app:layout_constraintTop_toBottomOf="@id/multi_image" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/share"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@id/tv_topic"
+            app:layout_constraintLeft_toLeftOf="@id/tv_username" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_share"
+            app:layout_constraintTop_toTopOf="@id/iv_share"
+            app:layout_constraintBottom_toBottomOf="@id/iv_share" />
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/comment"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@id/tv_topic"
+            app:layout_constraintLeft_toLeftOf="@id/guideline4" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_comment"
+            app:layout_constraintTop_toTopOf="@id/iv_share"
+            app:layout_constraintBottom_toBottomOf="@id/iv_share" />
+
+        <ImageView
+            android:id="@+id/iv_likes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/heart_grey"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@id/tv_topic"
+            app:layout_constraintRight_toLeftOf="@id/tv_like" />
+
+        <TextView
+            android:id="@+id/tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="457"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintRight_toRightOf="@id/tv_content"
+            app:layout_constraintTop_toTopOf="@id/iv_share"
+            app:layout_constraintBottom_toBottomOf="@id/iv_share" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.44" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

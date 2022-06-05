@@ -1,92 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/mine_background_style"
-    android:layout_marginTop="20dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/iv_theme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/mine_background"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHeight_percent="0.55"/>
+    <data>
 
-    <TextView
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_title"
-        android:text="[春日和]生活方式/海底时光机/春日玫瑰联合巡演 广州站 加场"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/iv_theme"
-        app:layout_constraintTop_toBottomOf="@id/iv_theme"/>
+        android:background="@drawable/mine_background_style"
+        android:layout_marginTop="20dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_content"
-        android:text="#独立,电子,流行 04.30. 周六 20:00 广州\n[春日和] 加长官宣！生活方式/海底时光机/春日玫瑰 联合巡演\n春日，留一个和风细雨的夜晚给现场的歌声，和我们在全新的日子里相见。"
-        android:letterSpacing="0.1"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="10sp"
-        android:textColor="@color/grey"
-        app:layout_constraintLeft_toLeftOf="@id/iv_theme"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+        <ImageView
+            android:id="@+id/iv_theme"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mine_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHeight_percent="0.55" />
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="0dp"
-        android:layout_height="0.001dp"
-        android:background="@color/grey1"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_content"
-        app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintStart_toStartOf="@id/tv_content"
-        app:layout_constraintEnd_toEndOf="@id/tv_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title"
+            android:text="[春日和]生活方式/海底时光机/春日玫瑰联合巡演 广州站 加场"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/iv_theme"
+            app:layout_constraintTop_toBottomOf="@id/iv_theme" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_time"
-        android:text="04-26 19:53"
-        android:letterSpacing="0.1"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="10dp"
-        android:paddingBottom="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="10sp"
-        android:textColor="@color/grey"
-        app:layout_constraintLeft_toLeftOf="@id/iv_theme"
-        app:layout_constraintTop_toBottomOf="@id/line"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_content"
+            android:text="#独立,电子,流行 04.30. 周六 20:00 广州\n[春日和] 加长官宣！生活方式/海底时光机/春日玫瑰 联合巡演\n春日，留一个和风细雨的夜晚给现场的歌声，和我们在全新的日子里相见。"
+            android:letterSpacing="0.1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            app:layout_constraintLeft_toLeftOf="@id/iv_theme"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05"
-        />
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="0.001dp"
+            android:background="@color/grey1"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_content"
+            app:layout_constraintWidth_percent="0.85"
+            app:layout_constraintStart_toStartOf="@id/tv_content"
+            app:layout_constraintEnd_toEndOf="@id/tv_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_time"
+            android:text="04-26 19:53"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            app:layout_constraintLeft_toLeftOf="@id/iv_theme"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

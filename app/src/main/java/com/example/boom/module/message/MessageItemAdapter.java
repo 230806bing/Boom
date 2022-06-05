@@ -7,9 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boom.R;
+import com.example.boom.databinding.ChatItemBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,17 +34,18 @@ public class MessageItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_item,parent,false);
-        return new MessageViewHolder(view);
+        ChatItemBinding chatItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.chat_item,parent,false);
+        return new MessageViewHolder(chatItemBinding.getRoot());
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MessageItem messageItem = messageItems.get(position);
-        ((MessageViewHolder) holder).ivPortrait.setImageResource(messageItem.getImageRes());
-        ((MessageViewHolder) holder).tvUsername.setText(messageItem.getUsername());
-        ((MessageViewHolder) holder).tvContent.setText(messageItem.getContent());
-        ((MessageViewHolder) holder).tvTime.setText(messageItem.getTime());
+        ChatItemBinding chatItemBinding = DataBindingUtil.getBinding(holder.itemView);
+        chatItemBinding.ivPortrait.setImageResource(messageItem.getImageRes());
+        chatItemBinding.tvUsername.setText(messageItem.getUsername());
+        chatItemBinding.tvContent.setText(messageItem.getContent());
+        chatItemBinding.tvTime.setText(messageItem.getTime());
     }
 
     @Override
@@ -51,17 +54,9 @@ public class MessageItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     static class MessageViewHolder extends RecyclerView.ViewHolder{
-        ImageView ivPortrait;
-        TextView tvUsername;
-        TextView tvContent;
-        TextView tvTime;
 
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivPortrait = itemView.findViewById(R.id.iv_portrait);
-            tvUsername = itemView.findViewById(R.id.tv_username);
-            tvContent = itemView.findViewById(R.id.tv_content);
-            tvTime = itemView.findViewById(R.id.tv_time);
         }
     }
 

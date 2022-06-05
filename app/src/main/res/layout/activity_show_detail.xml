@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".module.homepage.ShowDetailActivity">
+            <ImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintHeight_percent="0.28"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/background"/>
+
+            <ImageView
+                android:id="@+id/iv_show_cover"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.2"
+                app:layout_constraintWidth_percent="0.3"
+                app:layout_constraintTop_toTopOf="@id/iv_background"
+                app:layout_constraintBottom_toBottomOf="@id/iv_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/show_cover1"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="首届”声音共和诗歌市集“海朋森X发光曲线X野外合作社"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iv_show_cover"
+                app:layout_constraintTop_toTopOf="@id/iv_show_cover"
+                app:layout_constraintWidth_percent="0.55" />
+
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="#摇滚乐，后摇滚/器乐摇滚，独立摇滚"
+                android:textColor="@color/white2"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                app:layout_constraintWidth_percent="0.55" />
+
+            <ImageView
+                android:id="@+id/iv_collection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:letterSpacing="0.1"
+                android:background="@drawable/heart_grey"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintLeft_toLeftOf="@id/btn_collection"
+                app:layout_constraintTop_toTopOf="@id/btn_collection"
+                app:layout_constraintBottom_toBottomOf="@id/btn_collection"
+                app:layout_constraintWidth_percent="0.05"
+                app:layout_constraintHeight_percent="0.02"/>
+
+            <Button
+                android:id="@+id/btn_collection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:letterSpacing="0.1"
+                android:text="@string/collection"
+                android:textColor="@color/white2"
+                android:textSize="10sp"
+                android:background="@drawable/btn_collection_style"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="12dp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title"
+                app:layout_constraintRight_toRightOf="@id/tv_title"
+                app:layout_constraintBottom_toBottomOf="@id/iv_show_cover"
+                app:layout_constraintWidth_percent="0.28"
+                app:layout_constraintHeight_percent="0.04"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@drawable/mine_background_style"
+                app:layout_constraintHeight_percent="0.2"
+                app:layout_constraintTop_toBottomOf="@id/guideline1"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.27"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,4 +1,4 @@
-package com.example.boom.module.community;
+package com.example.boom.module.homepage;
 
 import android.app.Application;
 
@@ -11,12 +11,12 @@ import com.example.boom.base.viewmodel.BaseViewModel;
  * Description：
  * Param：
  * return：
- * PackageName：com.example.boom.module.community
+ * PackageName：com.example.boom.module.homepage
  * Author：陈冰
- * Date：2022/6/5 14:14
+ * Date：2022/6/5 23:23
  */
-public class CommunityLatestViewModel extends BaseViewModel<RepositoryImpl> {
-    public CommunityLatestViewModel(@NonNull Application application) {
+public class HomePageMusicShowViewModel extends BaseViewModel<RepositoryImpl> {
+    public HomePageMusicShowViewModel(@NonNull Application application) {
         super(application);
     }
 }

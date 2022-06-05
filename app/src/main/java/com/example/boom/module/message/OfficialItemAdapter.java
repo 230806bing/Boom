@@ -7,9 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boom.R;
+import com.example.boom.databinding.OfficialItemBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,17 +34,18 @@ public class OfficialItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.official_item,parent,false);
-        return new OfficialViewHolder(view);
+        OfficialItemBinding officialItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.official_item,parent,false);
+        return new OfficialViewHolder(officialItemBinding.getRoot());
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         OfficialItem officialItem = officialItems.get(position);
-        ((OfficialViewHolder) holder).ivTheme.setImageResource(officialItem.getImageRes());
-        ((OfficialViewHolder) holder).tvTitle.setText(officialItem.getTitle());
-        ((OfficialViewHolder) holder).tvContent.setText(officialItem.getContent());
-        ((OfficialViewHolder) holder).tvTime.setText(officialItem.getTime());
+        OfficialItemBinding officialItemBinding = DataBindingUtil.getBinding(holder.itemView);
+        officialItemBinding.ivTheme.setImageResource(officialItem.getImageRes());
+        officialItemBinding.tvTitle.setText(officialItem.getTitle());
+        officialItemBinding.tvContent.setText(officialItem.getContent());
+        officialItemBinding.tvTime.setText(officialItem.getTime());
     }
 
     @Override
@@ -51,17 +54,9 @@ public class OfficialItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     static class OfficialViewHolder extends RecyclerView.ViewHolder{
-        ImageView ivTheme;
-        TextView tvTitle;
-        TextView tvContent;
-        TextView tvTime;
 
         public OfficialViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivTheme = itemView.findViewById(R.id.iv_theme);
-            tvTitle = itemView.findViewById(R.id.tv_title);
-            tvContent = itemView.findViewById(R.id.tv_content);
-            tvTime = itemView.findViewById(R.id.tv_time);
         }
     }
 }

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import com.example.boom.R;
 import com.example.boom.base.fragment.BaseFragment;
 import com.example.boom.databinding.FragmentCommunityBinding;
+import com.example.boom.module.BlankFragment;
 import com.example.boom.module.message.MyFragmentPagerAdapter;
 import com.example.boom.module.message.OfficialFragment;
 
@@ -40,8 +41,8 @@ public class CommunityFragment extends BaseFragment<CommunityFragmentViewModel, 
     private void initView() {
         mCommunityFragments = new ArrayList<>();
         mCommunityFragments.add(new CommunityFocusOnFragment());
-        mCommunityFragments.add(new CommunityRecommendFragment());
-        mCommunityFragments.add(new CommunityLatestFragment());
+        mCommunityFragments.add(new BlankFragment(getString(R.string.recommend)));
+        mCommunityFragments.add(new BlankFragment(getString(R.string.latest)));
 
         MyFragmentPagerAdapter pagerAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), mCommunityFragments);
         mBinding.vpCommunity.setAdapter(pagerAdapter);

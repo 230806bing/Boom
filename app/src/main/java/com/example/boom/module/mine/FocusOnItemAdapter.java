@@ -7,9 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boom.R;
+import com.example.boom.databinding.FocusOnItemBinding;
 import com.example.boom.module.message.MessageItem;
 import com.example.boom.module.message.MessageItemAdapter;
 
@@ -34,16 +36,17 @@ public class FocusOnItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.focus_on_item,parent,false);
-        return new FocusOnViewHolder(view);
+        FocusOnItemBinding focusOnItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),R.layout.focus_on_item,parent,false);
+        return new FocusOnViewHolder(focusOnItemBinding.getRoot());
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         FocusOnItem focusOnItem = focusOnItems.get(position);
-        ((FocusOnViewHolder) holder).ivPortrait.setImageResource(focusOnItem.getImageRes());
-        ((FocusOnViewHolder) holder).tvUsername.setText(focusOnItem.getUsername());
-        ((FocusOnViewHolder) holder).tvLike.setText(focusOnItem.getLikedStyle());
+        FocusOnItemBinding focusOnItemBinding = DataBindingUtil.getBinding(holder.itemView);
+        focusOnItemBinding.ivPortrait.setImageResource(focusOnItem.getImageRes());
+        focusOnItemBinding.tvUsername.setText(focusOnItem.getUsername());
+        focusOnItemBinding.tvLike.setText(focusOnItem.getLikedStyle());
     }
 
     @Override
@@ -52,15 +55,9 @@ public class FocusOnItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     static class FocusOnViewHolder extends RecyclerView.ViewHolder{
-        ImageView ivPortrait;
-        TextView tvUsername;
-        TextView tvLike;
 
         public FocusOnViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivPortrait = itemView.findViewById(R.id.iv_portrait);
-            tvUsername = itemView.findViewById(R.id.tv_username);
-            tvLike = itemView.findViewById(R.id.tv_like);
         }
     }
 }
