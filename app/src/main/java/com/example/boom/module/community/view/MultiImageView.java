@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.boom.module.community.DensityUtil;
+import com.example.boom.module.community.GlideApp;
+import com.example.boom.module.community.MGlideApp;
 
 import java.util.List;
 
@@ -204,7 +206,7 @@ public class MultiImageView extends LinearLayout {
             }
         });
         // 加载网络图片/设置图片显示
-        Glide.with(getContext()).load(url).into(imageView);
+        GlideApp.with(getContext()).load(url).into(imageView);
         return imageView;
     }
 

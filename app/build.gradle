@@ -13,6 +13,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        configurations.all {
+//            resolutionStrategy {
+//                // 显⽰冲突的依赖库版本信息
+//                failOnVersionConflict()
+//            }
+//        }
     }
 
     buildTypes {
@@ -63,7 +70,13 @@ dependencies {
     implementation 'io.github.youth5201314:banner:2.2.2'
 
     //glide
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'androidx.annotation:annotation:1.0.0'
+    implementation ('com.github.bumptech.glide:glide:4.9.0') {
+        exclude group: "com.android.support"
+    }
+    implementation ("com.github.bumptech.glide:glide:4.9.0@aar") {
+        transitive = true
+    }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     //工具类集合（相关引用参考：https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md）

@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boom.R;
 import com.example.boom.module.community.view.MultiImageView;
-import com.example.boom.module.message.MessageItemAdapter;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,7 +50,7 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.community_focus_on_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.community_focus_on_item, parent, false);
         return new CommunityFocusOnViewHolder(view);
     }
 
@@ -67,14 +65,16 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
         ((CommunityFocusOnViewHolder) holder).tvShare.setText(communityFocusOnItem.getShared());
         ((CommunityFocusOnViewHolder) holder).tvComment.setText(communityFocusOnItem.getComment());
         ((CommunityFocusOnViewHolder) holder).tvLiked.setText(communityFocusOnItem.getLiked());
-        if (communityFocusOnItem.isFocusOn()){
+        if (communityFocusOnItem.isFocusOn()) {
             ((CommunityFocusOnViewHolder) holder).btnFocusOn.setText("已关注");
             ((CommunityFocusOnViewHolder) holder).btnFocusOn.setTextColor(0xBFA3A2A2);
-        }else {
+        } else {
             ((CommunityFocusOnViewHolder) holder).btnFocusOn.setText(R.string.focus_on_add);
         }
         ((CommunityFocusOnViewHolder) holder).multiImageView.setList(communityFocusOnItem.getImageList());
-        Log.e("TAG", communityFocusOnItem.getImageList().size()+"");
+        ViewGroup.LayoutParams p = ((CommunityFocusOnViewHolder) holder).multiImageView.getLayoutParams();
+        Log.e("TAG", "width: " + p.width + " height: " + p.height);
+        Log.e("TAG", communityFocusOnItem.getImageList().size() + "");
         Log.e("TAG", communityFocusOnItem.getImageList().get(0));
         Log.e("TAG", communityFocusOnItem.getImageList().get(1));
 //        ((CommunityFocusOnViewHolder) holder).multiImageView.setOnItemClickListener(new MultiImageView.OnItemClickListener() {
@@ -91,7 +91,7 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
         return communityFocusOnItems.size();
     }
 
-    private void bigImageLoader(Bitmap bitmap){
+    private void bigImageLoader(Bitmap bitmap) {
         final Dialog dialog = new Dialog(context);
         ImageView image = new ImageView(context);
         image.setImageBitmap(bitmap);
@@ -101,15 +101,15 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
         //显示
         dialog.show();
         //点击图片取消
-        image.setOnClickListener(new View.OnClickListener(){
+        image.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 dialog.cancel();
             }
         });
     }
 
-    public Bitmap returnBitMap(final String url){
+    public Bitmap returnBitMap(final String url) {
 
         new Thread(new Runnable() {
             @Override
@@ -122,7 +122,7 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
                     e.printStackTrace();
                 }
                 try {
-                    HttpURLConnection conn = (HttpURLConnection)imageurl.openConnection();
+                    HttpURLConnection conn = (HttpURLConnection) imageurl.openConnection();
                     conn.setDoInput(true);
                     conn.connect();
                     InputStream is = conn.getInputStream();
@@ -148,6 +148,7 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
         TextView tvLiked;
         Button btnFocusOn;
         MultiImageView multiImageView;
+
         public CommunityFocusOnViewHolder(@NonNull View itemView) {
             super(itemView);
             ivPortrait = itemView.findViewById(R.id.iv_portrait);
@@ -156,9 +157,9 @@ public class CommunityFocusOnAdapter extends RecyclerView.Adapter<RecyclerView.V
             tvContent = itemView.findViewById(R.id.tv_content);
             tvTopic = itemView.findViewById(R.id.tv_topic);
             tvShare = itemView.findViewById(R.id.tv_share);
-            tvComment  = itemView.findViewById(R.id.tv_comment);
-            tvLiked  = itemView.findViewById(R.id.tv_like);
-            btnFocusOn  = itemView.findViewById(R.id.btn_focus_on);
+            tvComment = itemView.findViewById(R.id.tv_comment);
+            tvLiked = itemView.findViewById(R.id.tv_like);
+            btnFocusOn = itemView.findViewById(R.id.btn_focus_on);
             multiImageView = itemView.findViewById(R.id.multi_image);
         }
     }
