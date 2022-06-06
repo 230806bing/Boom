@@ -14,14 +14,18 @@
         android:theme="@style/Theme.Boom"
         tools:replace="android:theme">
         <activity
-            android:name=".module.homepage.ShowDetailActivity"
+            android:name=".module.message.ChatDetailActivity"
             android:exported="true" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".module.homepage.ShowDetailActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".module.community.PostingActivity"
@@ -34,8 +38,7 @@
             android:exported="false" />
         <activity
             android:name=".module.homepage.HomePageActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".module.login.CodeLoginActivity"
             android:exported="false" />
