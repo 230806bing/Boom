@@ -1,5 +1,6 @@
 package com.example.boom.module.community;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -11,6 +12,8 @@ import com.example.boom.databinding.FragmentCommunityBinding;
 import com.example.boom.module.BlankFragment;
 import com.example.boom.module.message.MyFragmentPagerAdapter;
 import com.example.boom.module.message.OfficialFragment;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,11 +55,12 @@ public class CommunityFragment extends BaseFragment<CommunityFragmentViewModel, 
 
     @Override
     protected void setListener() {
-
+        mBinding.ivPosting.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-
+        Intent intent = new Intent(getActivity(),PostingActivity.class);
+        startActivity(intent);
     }
 }

@@ -6,31 +6,31 @@ import java.io.Serializable;
  * Description：泛型类，可根据后端的返回字段修改属性名
  * Param：
  * return：
- * PackageName：com.example.shimmer.base.retrofitwithrxjava.com.example.boom.bean
+ * PackageName：com.example.boom.base.retrofit.utils
  * Author：陈冰
  * Date：2022/1/14 18:15
  */
 public class BaseResponse<T> implements Serializable {
-    private static final int RESULT_SUCCESS = 200;
+    private static final int RESULT_SUCCESS = 20000;
     private int code;
-    private String msg;
+    private String message;
     private T data;
 
     @Override
     public String toString() {
         return "BaseResponse{" +
                 "code=" + code +
-                ", msg='" + msg + '\'' +
+                ", message='" + message + '\'' +
                 ", data=" + data +
                 '}';
     }
 
     public String getMsg() {
-        return msg;
+        return message;
     }
 
     public void setMsg(String message) {
-        this.msg = message;
+        this.message = message;
     }
 
     public T getData() {

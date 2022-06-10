@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintWidth_percent="0.7"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="number"
             android:hint="@string/tv_code"
             android:background="@drawable/et_style"
             android:paddingLeft="40dp"

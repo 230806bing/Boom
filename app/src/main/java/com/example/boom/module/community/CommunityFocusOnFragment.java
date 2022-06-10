@@ -69,7 +69,6 @@ public class CommunityFocusOnFragment extends BaseFragment<CommunityFocusOnViewM
 
     @Override
     protected void setListener() {
-
     }
 
     @Override

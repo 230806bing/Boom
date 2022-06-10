@@ -1,5 +1,6 @@
 package com.example.boom.module.message;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,14 @@ public class MessageItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         chatItemBinding.tvUsername.setText(messageItem.getUsername());
         chatItemBinding.tvContent.setText(messageItem.getContent());
         chatItemBinding.tvTime.setText(messageItem.getTime());
+        chatItemBinding.cl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(),ChatDetailActivity.class);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
+
     }
 
     @Override

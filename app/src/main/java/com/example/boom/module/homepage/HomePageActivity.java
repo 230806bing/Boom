@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -30,6 +31,13 @@ public class HomePageActivity extends BaseActivity<HomePageViewModel, ActivityHo
 
     @Override
     protected void processLogic() {
+        Intent intent = getIntent();
+        if (intent.getBooleanExtra("isChatDetail",false)){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.viewpager,new MessageFragment())
+                    .addToBackStack(null)
+                    .commit();
+        }
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         fragmentList.add(new HomePageFragment());
         fragmentList.add(new CommunityFragment());

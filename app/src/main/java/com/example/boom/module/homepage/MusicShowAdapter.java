@@ -1,5 +1,6 @@
 package com.example.boom.module.homepage;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,13 @@ public class MusicShowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         showItemBinding.tvTime.setText(musicShowItem.getTime());
         showItemBinding.tvTag.setText(musicShowItem.getTag());
         showItemBinding.tvPrice.setText(musicShowItem.getPrice());
+        showItemBinding.cl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(),ShowDetailActivity.class);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
 
 
 

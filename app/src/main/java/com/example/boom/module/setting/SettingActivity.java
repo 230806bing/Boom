@@ -1,6 +1,7 @@
 package com.example.boom.module.setting;
 
 
+import android.content.Intent;
 import android.view.View;
 
 import com.example.boom.R;
@@ -22,11 +23,11 @@ public class SettingActivity extends BaseActivity<SettingViewModel, ActivitySett
 
     @Override
     protected void setListener() {
-
+        mBinding.ivBack.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-
+        finish();
     }
 }

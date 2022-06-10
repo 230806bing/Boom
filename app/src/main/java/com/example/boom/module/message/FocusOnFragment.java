@@ -42,8 +42,8 @@ public class FocusOnFragment extends BaseFragment<FocusOnViewModel, FragmentFocu
     }
 
     private void initData() {
-        MessageItem messageItem1 = new MessageItem(R.drawable.portrait1,"蒋蒋","星星掉地里去啦，我要去接住它！","18:30");
-        MessageItem messageItem2 = new MessageItem(R.drawable.portrait2,"洋洋","迪士尼呢 不想玩嘛","20:00");
+        MessageItem messageItem1 = new MessageItem(R.drawable.portrait1,"一芳","吃饭了吗？","20:30");
+        MessageItem messageItem2 = new MessageItem(R.drawable.portrait2,"一颗冰","你到哪啦？","18:30");
         messageItems.add(messageItem1);
         messageItems.add(messageItem2);
     }

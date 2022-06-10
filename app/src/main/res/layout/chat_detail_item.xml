@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white2">
+
+        <com.example.boom.view.CircleImageView
+            android:id="@+id/iv_portrait_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/portrait"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/iv_portrait_left"
+            app:layout_constraintTop_toTopOf="@id/iv_portrait_left"
+            app:layout_constraintBottom_toBottomOf="@id/iv_portrait_left"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/chat_bubble_ano">
+
+            <TextView
+                android:id="@+id/left_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:text="23dhdjskdsddaaaaaaaaaa"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <com.example.boom.view.CircleImageView
+            android:id="@+id/iv_portrait_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/portrait2"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_marginTop="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_portrait_left"/>
+
+        <LinearLayout
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/iv_portrait_right"
+            app:layout_constraintTop_toTopOf="@id/iv_portrait_right"
+            app:layout_constraintBottom_toBottomOf="@id/iv_portrait_right"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/chat_bubble_mine">
+
+            <TextView
+                android:id="@+id/right_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:text="23dhdjskdsdaaaaaaaaaaaadaaaaaajlssdaaaaaaaaaa"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
