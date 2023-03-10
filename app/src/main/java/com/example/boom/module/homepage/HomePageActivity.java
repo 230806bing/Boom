@@ -28,6 +28,7 @@ public class HomePageActivity extends BaseActivity<HomePageViewModel, ActivityHo
         return R.layout.activity_home_page;
     }
 
+
     @Override
     protected void processLogic() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
